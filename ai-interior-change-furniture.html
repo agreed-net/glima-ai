@@ -1463,7 +1463,7 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                         <div
                             class="popup-content h-[547px] xl:h-[607px] 2xl:h-[668px] overflow-y-auto scroll-smooth  w-full  rounded-[10px] flex flex-col gap-3">
                             <div id="popular-edit">
-                                <h3 class="text-white md:text-xl text-sm font-medium leading-[30px] mb-2.5 ">Popular
+                                <h3 class="text-white md:text-xl text-base font-medium leading-[30px] mb-2.5 ">Popular
                                 </h3>
                                 <div
                                     class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-3 gap-2.5 w-full">
@@ -1771,7 +1771,7 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                                 </div>
                             </div>
                             <div id="minimalist">
-                                <h3 class="text-white md:text-xl text-sm  font-medium leading-[30px] mb-2.5">Minimalist
+                                <h3 class="text-white md:text-xl text-base  font-medium leading-[30px] mb-2.5">Minimalist
                                 </h3>
                                 <div
                                     class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-3 gap-2.5 w-full">
@@ -2079,7 +2079,7 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                                 </div>
                             </div>
                             <div id="modern">
-                                <h3 class="text-white md:text-xl text-sm  font-medium leading-[30px] mb-2.5">Modern</h3>
+                                <h3 class="text-white md:text-xl text-base  font-medium leading-[30px] mb-2.5">Modern</h3>
                                 <div
                                     class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-3 gap-2.5 w-full">
                                     <div
@@ -2386,7 +2386,7 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                                 </div>
                             </div>
                             <div id="trends">
-                                <h3 class="text-white md:text-xl text-sm  font-medium leading-[30px] mb-2.5">2025 Trends
+                                <h3 class="text-white md:text-xl text-base  font-medium leading-[30px] mb-2.5">2025 Trends
                                 </h3>
                                 <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 w-full">
                                     <div
@@ -3074,75 +3074,127 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
     </script>
     <!--scrollspy-->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector(".popup-content");
-            const links = document.querySelectorAll(".popup-links .scrollspy-link");
+       document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".popup-content");
+    const links = document.querySelectorAll(".popup-links .scrollspy-link");
 
-            if (!container || !links.length) return;
+    if (!container || !links.length) return;
 
-            const sections = Array.from(links)
-                .map(link => container.querySelector(link.getAttribute("href")))
-                .filter(Boolean);
+    const sections = Array.from(links)
+        .map(link => container.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
 
-            function scrollLinkToCenter(link) {
-                const parent = link.parentElement;
+    function isMobile() {
+        return window.innerWidth < 768;
+    }
 
-                // Only for mobile (flex-row)
-                if (window.innerWidth < 768) {
-                    const parentRect = parent.getBoundingClientRect();
-                    const linkRect = link.getBoundingClientRect();
+  function getHeaderOffset() {
+    const header = document.querySelector(".popup-header");
 
-                    const offset =
-                        linkRect.left -
-                        parentRect.left -
-                        parentRect.width / 2 +
-                        linkRect.width / 2;
+    if (window.innerWidth < 768) {
+        // Mobile → header height + EXTRA space
+        return (header ? header.offsetHeight : 80) + 10;
+    }
 
-                    parent.scrollBy({
-                        left: offset,
-                        behavior: "smooth"
-                    });
-                }
-            }
+    return header ? header.offsetHeight : 80;
+}
 
-            function setActive(index) {
-                links.forEach(l => l.classList.remove("scrollspy-active"));
+    function scrollLinkToCenter(link) {
+        const parent = link.parentElement;
 
-                const activeLink = links[index];
-                if (!activeLink) return;
+        if (isMobile()) {
+            const parentRect = parent.getBoundingClientRect();
+            const linkRect = link.getBoundingClientRect();
 
-                activeLink.classList.add("scrollspy-active");
-                scrollLinkToCenter(activeLink);
-            }
+            const offset =
+                linkRect.left -
+                parentRect.left -
+                parentRect.width / 2 +
+                linkRect.width / 2;
 
-            function updateActive() {
-                const scrollPos = container.scrollTop + 40;
-
-                sections.forEach((section, index) => {
-                    const top = section.offsetTop;
-                    const bottom = top + section.offsetHeight;
-
-                    if (scrollPos >= top && scrollPos < bottom) {
-                        setActive(index);
-                    }
-                });
-            }
-            links.forEach((link, index) => {
-                link.addEventListener("click", e => {
-                    e.preventDefault();
-
-                    container.scrollTo({
-                        top: sections[index].offsetTop - 20,
-                        behavior: "smooth"
-                    });
-
-                    setActive(index);
-                });
+            parent.scrollBy({
+                left: offset,
+                behavior: "smooth"
             });
+        }
+    }
 
-            container.addEventListener("scroll", updateActive);
-            updateActive();
+    function setActive(index) {
+        links.forEach(l => l.classList.remove("scrollspy-active"));
+
+        const activeLink = links[index];
+        if (!activeLink) return;
+
+        activeLink.classList.add("scrollspy-active");
+        scrollLinkToCenter(activeLink);
+    }
+
+    /* =========================
+       MOBILE + DESKTOP HANDLER
+    ========================= */
+
+    function updateActive() {
+        if (isMobile()) {
+            const headerOffset = getHeaderOffset();
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
+
+                const top = rect.top - containerRect.top;
+                const bottom = top + rect.height;
+
+                if (top <= headerOffset && bottom > headerOffset) {
+                    setActive(index);
+                }
+            });
+        } else {
+            // DESKTOP (your original logic untouched)
+            const scrollPos = container.scrollTop + 40;
+
+            sections.forEach((section, index) => {
+                const top = section.offsetTop;
+                const bottom = top + section.offsetHeight;
+
+                if (scrollPos >= top && scrollPos < bottom) {
+                    setActive(index);
+                }
+            });
+        }
+    }
+
+    /* =========================
+       CLICK SCROLL FIX
+    ========================= */
+
+    links.forEach((link, index) => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
+
+            if (isMobile()) {
+                const headerOffset = getHeaderOffset();
+
+                const targetTop =
+                    sections[index].offsetTop - headerOffset;
+
+                container.scrollTo({
+                    top: targetTop,
+                    behavior: "smooth"
+                });
+            } else {
+                container.scrollTo({
+                    top: sections[index].offsetTop - 20,
+                    behavior: "smooth"
+                });
+            }
+
+            setActive(index);
         });
+    });
+
+    container.addEventListener("scroll", updateActive);
+    updateActive();
+});
     </script>
     <!--mobile tab scroll-->
     <script>
