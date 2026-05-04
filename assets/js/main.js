@@ -427,11 +427,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const submenus = document.querySelectorAll(".submenu");
   const closeDropdowns = document.querySelectorAll(".close-dropdown");
   const closeSubmenus = document.querySelectorAll(".close-submenu");
-  const dropoverlay = document.getElementById("drop-overlay");
+  const overlay = document.querySelector(".overlay-modal");
 
   /* -------------------------
      Helpers
   ------------------------- */
+
+  function isMobile() {
+    return window.innerWidth <= 640;
+  }
 
   function anyDropdownOpen() {
     return [...dropdownMenus, ...submenus].some(
@@ -442,38 +446,52 @@ document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------
      Show / Hide Menu
   ------------------------- */
+function showMenu(menu) {
+  setDropdownPosition(menu);
 
-  function showMenu(menu) {
-    setDropdownPosition(menu);
+  // Step 1: make visible (but DON'T animate yet)
+  menu.classList.remove("invisible");
 
-    if (window.innerWidth > 640) {
-      menu.classList.remove("opacity-0", "invisible", "md:translate-y-[-10px]");
+  if (isMobile()) {
+    // Step 2: force browser to apply initial state
+    menu.style.transform = "translateY(100%)";
+    menu.style.opacity = "0";
+
+    // Step 3: next frame → animate
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        menu.style.transform = "translateY(0)";
+        menu.style.opacity = "1";
+      });
+    });
+
+  } else {
+    requestAnimationFrame(() => {
+      menu.classList.remove("opacity-0");
       menu.classList.add("opacity-100", "translate-y-0");
-    } else {
-      menu.classList.remove("opacity-0", "invisible", "max-sm:translate-y-full");
-      menu.classList.add("opacity-100", "translate-y-0");
-    }
+    });
+  }
+}
+function hideMenu(menu) {
+  if (isMobile()) {
+    menu.style.transform = "translateY(100%)";
+    menu.style.opacity = "0";
+  } else {
+    menu.classList.remove("opacity-100", "translate-y-0");
+    menu.classList.add("opacity-0", "translate-y-[-10px]");
   }
 
-  function hideMenu(menu) {
-    if (window.innerWidth > 640) {
-      menu.classList.remove("opacity-100", "translate-y-0");
-      menu.classList.add("opacity-0", "md:translate-y-[-10px]");
-    } else {
-      menu.classList.remove("opacity-100", "translate-y-0");
-      menu.classList.add("opacity-0", "max-sm:translate-y-full");
-    }
-
-    setTimeout(() => {
-      menu.classList.add("invisible");
-    }, 300);
-  }
-
+  setTimeout(() => {
+    menu.classList.add("invisible");
+  }, 300); // match CSS duration
+}
   /* -------------------------
      Dropdown Position
   ------------------------- */
 
   function setDropdownPosition(menu) {
+    if (isMobile()) return;
+
     const placement = menu.getAttribute("data-placement");
 
     menu.style.left = "";
@@ -490,24 +508,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* -------------------------
-     Overlay Control
+     Overlay Control (UPDATED)
   ------------------------- */
 
-  function showOverlay() {
-    if (window.innerWidth <= 640) {
-      dropoverlay.classList.remove("hidden", "invisible", "opacity-0");
-      dropoverlay.classList.add("opacity-100");
-    }
-  }
+function showOverlay() {
+  if (!isMobile()) return;
 
-  function forceHideOverlay() {
-    if (window.innerWidth > 640) return;
+  // Make it visible first
+  overlay.classList.remove("invisible");
+   overlay.classList.add("visible");
 
-    dropoverlay.classList.add("opacity-0");
-    setTimeout(() => {
-      dropoverlay.classList.add("hidden", "invisible");
-    }, 300);
-  }
+  // Force repaint so transition works
+  overlay.offsetHeight;
+
+  // Animate in
+  overlay.classList.remove("opacity-0");
+  overlay.classList.add("opacity-100");
+}
+
+function hideOverlay() {
+  if (!isMobile()) return;
+
+  // Animate out
+  overlay.classList.remove("opacity-100");
+  overlay.classList.add("opacity-0");
+
+  // Wait for animation, then hide
+  setTimeout(() => {
+    overlay.classList.add("invisible");
+     overlay.classList.remove("visible");
+  }, 300);
+}
 
   /* -------------------------
      Main Dropdown Buttons
@@ -528,7 +559,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showOverlay();
       } else {
         hideMenu(dropdownMenu);
-        forceHideOverlay();
+        hideOverlay();
       }
     });
   });
@@ -554,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showOverlay();
       } else {
         hideMenu(submenu);
-        forceHideOverlay();
+        hideOverlay();
       }
     });
   });
@@ -567,7 +598,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function (e) {
       e.stopPropagation();
       hideMenu(this.closest(".dropdown-menu"));
-      forceHideOverlay();
+      hideOverlay();
     });
   });
 
@@ -575,43 +606,51 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function (e) {
       e.stopPropagation();
       hideMenu(this.closest(".submenu"));
-      forceHideOverlay();
+      hideOverlay();
     });
   });
 
   /* -------------------------
-     Document Click (SAFE)
+     ESC Key
+  ------------------------- */
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && anyDropdownOpen()) {
+      dropdownMenus.forEach(menu => hideMenu(menu));
+      submenus.forEach(submenu => hideMenu(submenu));
+      hideOverlay();
+    }
+  });
+
+  /* -------------------------
+     Outside Click
   ------------------------- */
 
   document.addEventListener("click", function (e) {
-    // 🔴 Ignore clicks inside dropdowns
     if (
       e.target.closest(".dropdown-menu") ||
       e.target.closest(".submenu")
     ) return;
 
-    // 🔴 Ignore clicks inside ANY MODAL (change selector if needed)
     if (e.target.closest(".modal")) return;
 
-    // 🔴 If no dropdown is open, DO NOTHING (prevents modal conflicts)
     if (!anyDropdownOpen()) return;
 
     dropdownMenus.forEach(menu => hideMenu(menu));
     submenus.forEach(submenu => hideMenu(submenu));
-    forceHideOverlay();
+    hideOverlay();
   });
 
   /* -------------------------
      Overlay Click
   ------------------------- */
 
-  dropoverlay.addEventListener("click", function () {
+  overlay.addEventListener("click", function () {
     dropdownMenus.forEach(menu => hideMenu(menu));
     submenus.forEach(submenu => hideMenu(submenu));
-    forceHideOverlay();
+    hideOverlay();
   });
 });
-
 
 /*=====aspect ratio button active========*/
 document.addEventListener("DOMContentLoaded", function () {
