@@ -761,7 +761,6 @@
                 </div>
             </div>
         </nav>
-        <!--SideBar-->
         <div class="scrollspy-scroll flex lg:flex-row flex-col w-full">
             <!--SideBar-->
             <div id="create-section" class="relative flex lg:h-full gap-5 lg:overflow-hidden ">
@@ -788,7 +787,7 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                                     <path opacity="0.1" d="M0.5 0.5L0.499999 30.5" stroke="white"
                                         stroke-linecap="round" />
                                 </svg>
-                                <h2 class="text-xl font-semibold leading-normal text-white">Landscaping</h2>
+                                <h2 class="text-xl font-semibold leading-normal text-white">Interior Remodel</h2>
                             </div>
                             <div class="flex flex-col gap-2.5">
                                 <div
@@ -884,48 +883,40 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
 
                                 </div>
                             </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 xl:grid-cols-3 gap-3">
                                 <div
                                     class="bg-black rounded-[10px] py-5 flex flex-col justify-center items-center gap-3.5">
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M29.1641 29.1665L34.9974 34.9998" stroke="white" stroke-width="1.6"
+                                    <a href="#" class="relative">
+                                        <img src="assets/images/interior-small-img.png" alt="image"
+                                            class="w-10 h-10 rounded" />
+                                        <div
+                                            class="close-btn-small w-3 h-3 flex justify-center items-center bg-white rounded backdrop-blur-[3px] absolute right-[-2px]  top-[-2px] transition-all duration-500 hover:bg-[rgb(198,255,0,1)] text-black hover:text-black z-10">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                                                viewBox="0 0 8 8" fill="none">
+                                                <path
+                                                    d="M2 6L4.00001 4.00001M4.00001 4.00001L6 2M4.00001 4.00001L2 2M4.00001 4.00001L6 6"
+                                                    stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <span class="text-sm font-normal leading-[18px] text-white">Room Type</span>
+
+                                    <button
+                                        class="w-fit flex items-center justify-center gap-1.5 py-1 pl-[5px] pr-2 rounded-md bg-[#C6FF0029] hover:bg-[#9ea97729] text-[#C6FF00] text-sm font-normal leading-[18px]  transition-all duration-500"
+                                        data-modal-target="roomtype">Change</button>
+                                </div>
+                                <div
+                                    class="bg-black rounded-[10px] py-5 flex flex-col justify-center items-center gap-3.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none">
+                                        <path d="M29.167 29.1641L35.0003 34.9974" stroke="white" stroke-width="1.6"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                         <path
                                             d="M7.5 7.5L11.6667 18.3333L5 25L15 25.8333L20 35L23.3333 24.1667L34.1667 20L25 15V5L17.5 11.6667L7.5 7.5Z"
                                             stroke="white" stroke-width="1.6" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-
-                                    <span class="text-sm font-normal leading-[18px] text-white">Garden Style</span>
-
-                                    <button
-                                        class="w-fit flex items-center justify-center gap-1.5 py-1 pl-[5px] pr-2 rounded-md bg-[#C6FF0029] hover:bg-[#9ea97729] text-[#C6FF00] text-sm font-normal leading-[18px]  transition-all duration-500"
-                                        data-modal-target="roomtype"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" viewBox="0 0 16 16" fill="none">
-                                            <path
-                                                d="M7.72703 15.375C9.37148 15.375 10.663 15.375 11.6711 15.2395C12.7037 15.1007 13.5229 14.8101 14.1665 14.1665C14.8102 13.5228 15.1007 12.7036 15.2395 11.6712C15.375 10.6629 15.375 9.37151 15.375 7.72706V7.64794C15.375 6.00351 15.375 4.71206 15.2395 3.70386C15.1007 2.67137 14.8102 1.85215 14.1665 1.2085C13.5229 0.564848 12.7037 0.274313 11.6711 0.135503C10.663 -1.48751e-05 9.37148 -7.38842e-06 7.72703 1.11584e-07H7.64798C6.00351 -7.38842e-06 4.71206 -1.48751e-05 3.70386 0.135503C2.67137 0.274313 1.85215 0.564848 1.2085 1.2085C0.564848 1.85215 0.274313 2.67137 0.135495 3.70386C-1.48863e-05 4.71206 -7.38841e-06 6.00351 1.11589e-07 7.64794V7.72706C-7.38841e-06 9.37151 -1.48863e-05 10.6629 0.135495 11.6712C0.274313 12.7036 0.564848 13.5228 1.2085 14.1665C1.85215 14.8101 2.67137 15.1007 3.70386 15.2395C4.71206 15.375 6.00351 15.375 7.64798 15.375H7.72703ZM7.6875 11.4375C7.27328 11.4375 6.9375 11.1017 6.9375 10.6875V8.43754H4.6875C4.27329 8.43754 3.9375 8.10169 3.9375 7.68754C3.9375 7.27331 4.27329 6.93754 4.6875 6.93754H6.9375V4.6875C6.9375 4.27329 7.27328 3.9375 7.6875 3.9375C8.10173 3.9375 8.4375 4.27329 8.4375 4.6875V6.93754H10.6875L10.7644 6.94114C11.1425 6.97969 11.4375 7.29926 11.4375 7.68754C11.4375 8.07574 11.1425 8.39531 10.7644 8.43386L10.6875 8.43754H8.4375V10.6875C8.4375 11.1017 8.10173 11.4375 7.6875 11.4375Z"
-                                                fill="#C6FF00" />
-                                        </svg>Add</button>
-                                </div>
-                                <div
-                                    class="bg-black rounded-[10px] py-5 flex flex-col justify-center items-center gap-3.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                        fill="none">
-                                        <path d="M20 36.6667V15" stroke="white" stroke-width="1.6"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path
-                                            d="M25 28.3335C27.989 26.6045 30 23.7015 30 20.0002V13.3335C30 7.81065 25.5228 3.3335 20 3.3335C14.4771 3.3335 10 7.81065 10 13.3335V20.0002C10 23.7015 12.011 26.6045 15 28.3335"
-                                            stroke="white" stroke-width="1.6" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M20 25.0002L24.1667 20.8335" stroke="white" stroke-width="1.6"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M20.0026 21.6667L15.8359 17.5" stroke="white" stroke-width="1.6"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M16.6641 36.6665H23.3307" stroke="white" stroke-width="1.6"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                    <span class="text-sm font-normal leading-[18px] text-white">Elements</span>
+                                    <span class="text-sm font-normal leading-[18px] text-white">Style</span>
 
                                     <button
                                         class="w-fit flex items-center justify-center gap-1.5 py-1 pl-[5px] pr-2 rounded-md bg-[#C6FF0029] hover:bg-[#9ea97729] text-[#C6FF00] text-sm font-normal leading-[18px]  transition-all duration-500"
@@ -936,13 +927,47 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                                                 fill="#C6FF00" />
                                         </svg>Add</button>
                                 </div>
+                                <div
+                                    class="bg-black rounded-[10px] py-5 flex flex-col justify-center items-center gap-3.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none">
+                                        <path
+                                            d="M26.6663 36.6693C24.8897 34.5948 22.5558 33.3359 19.9997 33.3359C17.4435 33.3359 15.1097 34.5948 13.333 36.6693"
+                                            stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M35 16.6641L32.588 17.8701C32.0233 18.1524 31.6667 18.7294 31.6667 19.3607V21.6641C31.6667 23.3307 30 24.9974 28.3333 24.9974M5 16.6641L7.412 17.8701C7.97665 18.1524 8.33333 18.7294 8.33333 19.3607V21.6641C8.33333 23.3307 10 24.9974 11.6667 24.9974"
+                                            stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20 26.6641V36.6641" stroke="white" stroke-width="1.6"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M13.851 15.4068L11.8687 7.47772C11.3428 5.3739 12.934 3.33594 15.1025 3.33594H24.8973C27.066 3.33594 28.6571 5.3739 28.1311 7.47772L26.149 15.4068C25.9635 16.1488 25.2968 16.6693 24.532 16.6693H15.4679C14.7031 16.6693 14.0365 16.1488 13.851 15.4068Z"
+                                            stroke="white" stroke-width="1.6" stroke-linejoin="round" />
+                                        <path d="M20 16.6641V21.6641" stroke="white" stroke-width="1.6"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M11.667 25.2109V26.6692H28.3337V25.2109C28.3337 23.8862 27.5752 22.6916 26.4107 22.1821C22.308 20.3872 17.6927 20.3872 13.5901 22.1821C12.4255 22.6916 11.667 23.8862 11.667 25.2109Z"
+                                            stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm font-normal leading-[18px] text-white">Elements</span>
 
+                                    <button
+                                        class="w-fit flex items-center justify-center gap-1.5 py-1 pl-[5px] pr-2 rounded-md bg-[#C6FF0029] hover:bg-[#9ea97729] text-[#C6FF00] text-sm font-normal leading-[18px]  transition-all duration-500"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none">
+                                            <path
+                                                d="M7.72703 15.375C9.37148 15.375 10.663 15.375 11.6711 15.2395C12.7037 15.1007 13.5229 14.8101 14.1665 14.1665C14.8102 13.5228 15.1007 12.7036 15.2395 11.6712C15.375 10.6629 15.375 9.37151 15.375 7.72706V7.64794C15.375 6.00351 15.375 4.71206 15.2395 3.70386C15.1007 2.67137 14.8102 1.85215 14.1665 1.2085C13.5229 0.564848 12.7037 0.274313 11.6711 0.135503C10.663 -1.48751e-05 9.37148 -7.38842e-06 7.72703 1.11584e-07H7.64798C6.00351 -7.38842e-06 4.71206 -1.48751e-05 3.70386 0.135503C2.67137 0.274313 1.85215 0.564848 1.2085 1.2085C0.564848 1.85215 0.274313 2.67137 0.135495 3.70386C-1.48863e-05 4.71206 -7.38841e-06 6.00351 1.11589e-07 7.64794V7.72706C-7.38841e-06 9.37151 -1.48863e-05 10.6629 0.135495 11.6712C0.274313 12.7036 0.564848 13.5228 1.2085 14.1665C1.85215 14.8101 2.67137 15.1007 3.70386 15.2395C4.71206 15.375 6.00351 15.375 7.64798 15.375H7.72703ZM7.6875 11.4375C7.27328 11.4375 6.9375 11.1017 6.9375 10.6875V8.43754H4.6875C4.27329 8.43754 3.9375 8.10169 3.9375 7.68754C3.9375 7.27331 4.27329 6.93754 4.6875 6.93754H6.9375V4.6875C6.9375 4.27329 7.27328 3.9375 7.6875 3.9375C8.10173 3.9375 8.4375 4.27329 8.4375 4.6875V6.93754H10.6875L10.7644 6.94114C11.1425 6.97969 11.4375 7.29926 11.4375 7.68754C11.4375 8.07574 11.1425 8.39531 10.7644 8.43386L10.6875 8.43754H8.4375V10.6875C8.4375 11.1017 8.10173 11.4375 7.6875 11.4375Z"
+                                                fill="#C6FF00" />
+                                        </svg>Add</button>
+                                </div>
                             </div>
                             <div class="flex items-center gap-3.5">
                                 <div class="w-full">
                                     <div class="flex flex-col gap-2.5">
                                         <div class="flex flex-col gap-2">
-                                            <label class="text-sm leading-[18px] text-white font-normal">Number of
+                                            <label class="text-sm  font-medium text-white">Number of
                                                 Images</label>
                                             <div
                                                 class="flex justify-between items-center py-3 pl-[18px] pr-3 rounded-[10px] bg-black">
@@ -1094,6 +1119,7 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                 <h3 class="text-xl font-semibold leading-normal text-white pb-5 lg:hidden block">My Creation</h3>
                 <div class="w-full h-full relative">
                     <div class="flex flex-col gap-5">
+              
                     </div>
                 </div>
             </div>
@@ -1186,7 +1212,173 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
             </div>
         </div>
     </div>
+    <!--Big image Modal-->
+    <div class="modalTrigger  modal-image" id="image-modal">
+        <div
+            class="absolute bg-black-1B1B1B w-9 h-9 -left-12 z-50 flex items-center justify-center border-[0.8px] border-[rgba(255,255,255,0.20)] rounded-lg cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.6063 8.99896H2.40625M2.40625 8.99896L8.63958 2.76562M2.40625 8.99896L8.63958 15.2323"
+                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
 
+        </div>
+        <div class="relative bg-black-1B1B1B p-3.5 rounded-3xl lg:h-auto h-full overflow-auto">
+            <div class="flex lg:flex-row flex-col-reverse gap-3.5  w-full">
+                <div class="bg-black-0a0a0a rounded-xl xl:max-w-[1294px] lg:max-w-[1180px] lg:w-[75%] relative">
+                    <div class="w-full h-full max-h-[800px] rounded-xl overflow-hidden">
+                        <img id="zoomImage" src="assets/images/big-image.png" alt="image"
+                            class="w-full h-full rounded-xl" />
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
+                        <span class="text-xs text-white">100%</span>
+                        <input id="zoom" class="rangeslider-zoom" type="range" min="100" max="500" step="5"
+                            value="100" />
+                        <span class="text-xs text-white" id="zoomValue">500%</span>
+                    </div>
+                </div>
+                <div class="relative  lg:w-[25%]">
+                    <div class="flex flex-col justify-between h-full">
+                        <div class="block">
+                            <div class="pb-4 mb-4 border-b border-white/10 flex justify-between items-center">
+                                <h4 class="text-lg text-white font-medium">19 Mar. 2025</h4>
+                                <div class="flex items-center gap-5">
+                                    <button class="relative">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.5 5H4.16667H17.5" stroke="white" stroke-width="1.4"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M6.66406 5.0013V3.33464C6.66406 2.89261 6.83966 2.46868 7.15222 2.15612C7.46478 1.84356 7.8887 1.66797 8.33073 1.66797H11.6641C12.1061 1.66797 12.53 1.84356 12.8426 2.15612C13.1551 2.46868 13.3307 2.89261 13.3307 3.33464V5.0013M15.8307 5.0013V16.668C15.8307 17.11 15.6551 17.5339 15.3426 17.8465C15.03 18.159 14.6061 18.3346 14.1641 18.3346H5.83073C5.3887 18.3346 4.96478 18.159 4.65222 17.8465C4.33966 17.5339 4.16406 17.11 4.16406 16.668V5.0013H15.8307Z"
+                                                stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8.33594 9.16797V14.168" stroke="white" stroke-width="1.4"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M11.6641 9.16797V14.168" stroke="white" stroke-width="1.4"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="close-btn cursor-pointer p-1.5 rounded-lg bg-black-0a0a0a border-[0.8px] border-white/20 text-white transition-all duration-300 hover:text-limegreen w-9 h-9 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 22 22" fill="none">
+                                            <path
+                                                d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
+                                                stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center flex-wrap gap-1 mb-4 pb-4 border-b border-white/10">
+                                <img src="assets/images/editor-demo-img1.png" alt="image"
+                                    class="w-[60px] h-[60px] rounded-xl" />
+                                <img src="assets/images/editor-demo-img1.png" alt="image"
+                                    class="w-[60px] h-[60px] rounded-xl" />
+                                <img src="assets/images/editor-demo-img1.png" alt="image"
+                                    class="w-[60px] h-[60px] rounded-xl" />
+                                <img src="assets/images/editor-demo-img1.png" alt="image"
+                                    class="w-[60px] h-[60px] rounded-xl" />
+                                <img src="assets/images/editor-demo-img1.png" alt="image"
+                                    class="w-[60px] h-[60px] rounded-xl" />
+                                <img src="assets/images/editor-demo-img1.png" alt="image"
+                                    class="w-[60px] h-[60px] rounded-xl" />
+                            </div>
+                            <div class="flex flex-col gap-3.5 mb-5">
+                                <div class="flex items-center justify-between">
+                                    <h5 class="text-base font-medium text-white">Prompt</h5>
+                                    <a href="#" class="flex gap-2 items-center text-sm text-limegreen">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.6693 8.5987V11.3987C10.6693 13.732 9.73594 14.6654 7.4026 14.6654H4.6026C2.26927 14.6654 1.33594 13.732 1.33594 11.3987V8.5987C1.33594 6.26536 2.26927 5.33203 4.6026 5.33203H7.4026C9.73594 5.33203 10.6693 6.26536 10.6693 8.5987Z"
+                                                stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M14.6693 4.5987V7.3987C14.6693 9.73203 13.7359 10.6654 11.4026 10.6654H10.6693V8.5987C10.6693 6.26536 9.73594 5.33203 7.4026 5.33203H5.33594V4.5987C5.33594 2.26536 6.26927 1.33203 8.6026 1.33203H11.4026C13.7359 1.33203 14.6693 2.26536 14.6693 4.5987Z"
+                                                stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        Copy Prompt
+                                    </a>
+                                </div>
+                                <p class="text-sm text-white leading-6">Futuristic girl racer in cyberpunk costume
+                                    sitting on a high-tech sportsbike. Detailed mecha design with metallic elements,
+                                    aggressive lines of the motorcycle.</p>
+                            </div>
+                            <div class="flex flex-col gap-3.5">
+                                <button
+                                    class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-black font-medium bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.25 11.25V14.25C16.25 14.6478 16.092 15.0294 15.8107 15.3107C15.5294 15.592 15.1478 15.75 14.75 15.75H4.25C3.85218 15.75 3.47064 15.592 3.18934 15.3107C2.90804 15.0294 2.75 14.6478 2.75 14.25V11.25"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M5.75 7.5L9.5 11.25L13.25 7.5" stroke="black" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.5 11.25V2.25" stroke="black" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    Download HD
+                                </button>
+                                <button
+                                    class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm  font-medium bg-[rgba(198,255,0,0.10)] hover:bg-[rgba(198,255,0,0.20)] text-limegreen transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.00313 2.25H6.75313C5.29063 6.63 5.29063 11.37 6.75313 15.75H6.00313"
+                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M11.25 2.25C12.7125 6.63 12.7125 11.37 11.25 15.75" stroke="#C6FF00"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2.25 12V11.25C6.63 12.7125 11.37 12.7125 15.75 11.25V12"
+                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M2.25 6.74922C6.63 5.28672 11.37 5.28672 15.75 6.74922"
+                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    Publish to community
+                                </button>
+                                <button
+                                    class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-white font-medium bg-[#2A2A2A] hover:bg-[#393939] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.2422 13.125H12.3747C14.6397 13.125 16.4997 11.2725 16.4997 9C16.4997 6.735 14.6472 4.875 12.3747 4.875H11.2422"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M6.75 4.875H5.625C3.3525 4.875 1.5 6.7275 1.5 9C1.5 11.265 3.3525 13.125 5.625 13.125H6.75"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6 9H12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Copy Image URL
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="absolute bg-black-1B1B1B w-9 h-9 -right-12 z-50 flex items-center justify-center border-[0.8px] border-[rgba(255,255,255,0.20)] rounded-lg cursor-pointer">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.39375 8.99896H15.5938M15.5938 8.99896L9.36042 2.76562M15.5938 8.99896L9.36042 15.2323"
+                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+        </div>
+    </div>
     <!-- room type modal  -->
     <div class="modalTrigger  m-0 modal-home w-full md:max-w-[740px] lg:max-w-[1140px] 2xl:max-w-[1340px] p-5"
         id="roomtype">
@@ -2768,6 +2960,8 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                                     <h5 class="md:text-base text-sm font-normal text-white text-center mt-2.5">Super
                                         Realistic</h5>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -2953,6 +3147,56 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
         });
     </script>
     <!--mobile tab scroll-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileButtons = document.querySelectorAll(".mobile-tab .scrollspy-link");
+            if (!mobileButtons.length) return;
+
+            const sections = Array.from(mobileButtons).map(btn =>
+                document.querySelector(btn.getAttribute("href"))
+            );
+
+            // Set the active class
+            function setMobileActive(index) {
+                mobileButtons.forEach(b => b.classList.remove("scrollspy-active"));
+                mobileButtons[index]?.classList.add("scrollspy-active");
+            }
+
+            // Set first button active by default
+            setMobileActive(0);
+
+            // Click event for smooth scrolling
+            mobileButtons.forEach((btn, index) => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    const target = sections[index];
+                    if (!target) return;
+
+                    setMobileActive(index);
+
+                    window.scrollTo({
+                        top: target.offsetTop - 60,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            // Scroll event for automatic active update
+            window.addEventListener("scroll", () => {
+                let scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+                sections.forEach((section, index) => {
+                    if (!section) return;
+                    const sectionTop = section.offsetTop - 60;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                        setMobileActive(index);
+                    }
+                });
+            });
+        });
+    </script>
     <script>
         const createBtn = document.getElementById("create")
         const myCreationBtn = document.getElementById("my-creation")

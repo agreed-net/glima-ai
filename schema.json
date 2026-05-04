@@ -1,15 +1,15 @@
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Glima AI",
-  "url": "https://glima.ai",
-  "logo": "https://glima.ai/storage/media/1751000698_GYFPphpqwQzhm.png",
-   "description": "Glima AI is an all-in-one AI creative platform for generating, editing, and enhancing images and videos using advanced artificial intelligence models.",
-  "sameAs": [
-    "https://twitter.com/glimaai",
-    "https://discord.com/invite/n2d3WaTa"
-  ]
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Glima AI",
+    "url": "https://glima.ai",
+    "logo": "https://glima.ai/storage/media/1751000698_GYFPphpqwQzhm.png",
+    "description": "Glima AI is an all-in-one AI creative platform for generating, editing, and enhancing images and videos using advanced artificial intelligence models.",
+    "sameAs": [
+      "https://twitter.com/glimaai",
+      "https://discord.com/invite/n2d3WaTa"
+    ]
+  }
 
 i already told you when i give you link web search and read page go to frequently asked question page and copy all faq and add it into faq schema
 
@@ -17,22 +17,22 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Create AI Background Explosion Videos",
+  "name": "How to Create an AI Hug Video with Glima",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Upload Your Image",
-      "text": "Upload a clear image with a visible subject and background space."
+      "name": "Upload The Image",
+      "text": "Upload the image you’d like to animate. Our AI will process the image and create lifelike animations, turning your photo into a stunning visual experience."
     },
     {
       "@type": "HowToStep",
-      "name": "Apply the Explosion Effect",
-      "text": "AI adds realistic fire, debris, and cinematic blast animation behind you."
+      "name": "Initiate AI Hug Video Creation",
+      "text": "Initiate AI Hug Video Creation by uploading your image or selecting a prompt. Our AI will analyze the input and generate a heartwarming hug video."
     },
     {
       "@type": "HowToStep",
-      "name": "Download Your Video",
-      "text": "Preview your action scene and download the explosion video instantly."
+      "name": "AI Hug Video Created and Share",
+      "text": "Generate a heartwarming AI hug video and share it wherever you like! Whether you need a virtual pick-me-up or want to brighten someone else's day."
     }
   ]
 }
@@ -43,42 +43,50 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the AI Background Explosion video generator?",
+      "name": "What is an AI Hug Video Generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is an AI tool that adds a cinematic explosion behind the subject in your photo to create an action video."
+        "text": "AI hug video is a captivating video created using static photos that portrays two people hugging. Leveraging advanced AI technology."
       }
     },
     {
       "@type": "Question",
-      "name": "What type of photo works best?",
+      "name": "Which is the Best AI Hug Video Generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Images with clear subjects and some background space give the best explosion results"
+        "text": "Glima AI is built to meet these essential criteria, ensuring you get the best experience when creating your AI hug videos. Our goal is to provide you with a seamless, satisfying process that brings your heartfelt moments to life effortlessly."
       }
     },
     {
       "@type": "Question",
-      "name": "Does the explosion look realistic?",
+      "name": "How Can Glima AI Assist in Creating AI Hug Videos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The AI generates fire, smoke, and debris effects to simulate real explosions."
+        "text": "Our AI hug video generator is expertly designed to help you create heartwarming AI-generated hug videos from static images. Simply upload images of two individuals (or a single image with both people), provide a prompt, and we'll quickly generate a personalized."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I control the intensity of the explosion?",
+      "name": "Can Glima AI Create a Hug Between a Real Person and an Anime Character?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Some tools allow prompts to adjust size, fire intensity, and style of the explosion."
+        "text": "You can create a hug between any real person, historical figure, or even an anime or cartoon character, as long as you have clear images of them."
       }
     },
     {
       "@type": "Question",
-      "name": "How long does it take to generate the video?",
+      "name": "Can You Create AI Hug Videos for Free on Glima AI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most explosion videos are created within seconds to a few minutes after uploading."
+        "text": "You can try the Glima AI hug video generator for free. Enjoy full access to all the features at no cost, allowing you to effortlessly bring your cherished memories to life with personalized."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Types of Photos Are Allowed for Upload?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept JPG or PNG images that are at least 300 pixels in size, with a maximum file size of 10 MB. The images should be clear, high-quality, and properly showcase the subjects."
       }
     }
   ]
