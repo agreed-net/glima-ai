@@ -1984,3 +1984,29 @@ body.no-scroll {
 textarea{
   resize: none;
 }
+   @keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wave-move {
+  0%   { transform: translateY(0px); }
+  25%  { transform: translateY(-4px); }
+  50%  { transform: translateY(0px); }
+  75%  { transform: translateY(4px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes waveMorph {
+  0%   { transform: scaleY(1); }
+  25%  { transform: scaleY(1.15); }
+  50%  { transform: scaleY(0.9); }
+  75%  { transform: scaleY(1.1); }
+  100% { transform: scaleY(1); }    
+}
+@keyframes waveAdvanced {
+  0%   { transform: scaleY(1); opacity: 0.9; }
+  25%  { transform: scaleY(1.2); opacity: 1; }
+  50%  { transform: scaleY(0.85); opacity: 0.7; }
+  75%  { transform: scaleY(1.1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0.9; }
+}
