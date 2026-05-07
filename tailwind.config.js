@@ -23,6 +23,8 @@ module.exports = {
      "./vidu/**/*.html",
       "./comic/**/*.html",
         "./tools/**/*.html",
+         "./audio-landingpage/**/*.html",
+          "./interior-empty-state/**/*.html",
   ],
   theme: {
     extend: {
