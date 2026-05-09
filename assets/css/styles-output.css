@@ -7211,6 +7211,10 @@ pre{
   border-color: #FFFFFF80;
 }
 
+.border-\[rgba\(0\2c 0\2c 0\2c 0\)\] {
+  border-color: rgba(0,0,0,0);
+}
+
 .border-\[rgba\(153\2c 153\2c 153\2c 0\.20\)\] {
   border-color: rgba(153,153,153,0.20);
 }
@@ -10279,9 +10283,8 @@ pre{
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.ring-black {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity, 1));
+.ring-inset {
+  --tw-ring-inset: inset;
 }
 
 .ring-transparent {
@@ -10293,8 +10296,17 @@ pre{
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
 }
 
-.ring-\[rgba\(0\2c 0\2c 0\2c 0\)\] {
-  --tw-ring-color: rgba(0,0,0,0);
+.ring-limegreen\/0 {
+  --tw-ring-color: rgb(198 255 0 / 0);
+}
+
+.ring-limegreen {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(198 255 0 / var(--tw-ring-opacity, 1));
+}
+
+.ring-opacity-0 {
+  --tw-ring-opacity: 0;
 }
 
 .blur {
@@ -10436,6 +10448,12 @@ pre{
 
 .transition-transform {
   transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[box-shadow\] {
+  transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -11674,6 +11692,14 @@ textarea{
   --tw-ring-color: rgb(255 255 255 / 0.3);
 }
 
+.hover\:ring-limegreen\/100:hover {
+  --tw-ring-color: rgb(198 255 0 / 1);
+}
+
+.hover\:ring-opacity-100:hover {
+  --tw-ring-opacity: 1;
+}
+
 .focus\:border-\[\#47580C\]:focus {
   --tw-border-opacity: 1;
   border-color: rgb(71 88 12 / var(--tw-border-opacity, 1));
@@ -11775,6 +11801,10 @@ textarea{
   --tw-ring-color: rgb(255 255 255 / 0.3);
 }
 
+.focus\:ring-opacity-100:focus {
+  --tw-ring-opacity: 1;
+}
+
 .focus-visible\:ring-2:focus-visible {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -11871,6 +11901,10 @@ textarea{
 
 .group:hover .group-hover\:fill-white {
   fill: #fff;
+}
+
+.group:hover .group-hover\:stroke-\[\#C6FF00\] {
+  stroke: #C6FF00;
 }
 
 .group:hover .group-hover\:stroke-limegreen {
