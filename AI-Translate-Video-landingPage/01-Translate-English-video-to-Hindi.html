@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/styles-output.css">
+    <link rel="stylesheet" href="../assets/css/input.css">  
+    <style>
+        .tab-buttons li {
+            padding: 8px 12px;
+            background: transparent;
+            color: black;
+            cursor: pointer;
+        }
+
+        .tab-buttons li.active {
+            background: black !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body class="relative bg-[#0A0A0A]">
+
+    <!--navbar-->
+    <nav id="navbar" class="navbar  fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg">
+        <div id="inner" class="lg:px-3 px-0 pt-[15px] pb-[19px]">
+            <div class="w-full flex  flex-col lg:flex-row">
+                <div class="px-3 xl:px-0 flex justify-between items-center lg:flex-row">
+                    <div class="flex items-center">
+                        <a href="#" class="flex items-center">
+                            <svg width="113" height="36" viewBox="0 0 113 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="35.7268" height="35.7268" rx="7.58393" fill="#C6FF00" />
+                                <path
+                                    d="M110.103 14.0696H113.002V27.4879H110.103V25.5556C109.084 26.978 107.5 27.8367 105.407 27.8367C101.757 27.8367 98.7246 24.7505 98.7246 20.7787C98.7246 16.7801 101.757 13.7207 105.407 13.7207C107.5 13.7207 109.084 14.5795 110.103 15.975V14.0696ZM105.863 25.0726C108.278 25.0726 110.103 23.2745 110.103 20.7787C110.103 18.2829 108.278 16.4849 105.863 16.4849C103.448 16.4849 101.623 18.2829 101.623 20.7787C101.623 23.2745 103.448 25.0726 105.863 25.0726Z"
+                                    fill="white" />
+                                <path
+                                    d="M91.3012 13.7207C94.3337 13.7207 96.3733 15.814 96.3733 19.1685V27.4879H93.475V19.3564C93.475 17.4778 92.4552 16.4312 90.8718 16.4312C89.1543 16.4312 87.9466 17.5315 87.9466 19.9736V27.4879H85.0483V19.3564C85.0483 17.4778 84.109 16.4312 82.5256 16.4312C80.8886 16.4312 79.5468 17.5315 79.5468 19.9736V27.4879H76.6484V14.0696H79.5468V15.6798C80.4056 14.3648 81.7205 13.7207 83.3844 13.7207C85.1288 13.7207 86.4169 14.499 87.1952 15.8408C88.0808 14.4453 89.5031 13.7207 91.3012 13.7207Z"
+                                    fill="white" />
+                                <path
+                                    d="M71.8341 12.057C70.8144 12.057 69.9824 11.1982 69.9824 10.2052C69.9824 9.18545 70.8144 8.35352 71.8341 8.35352C72.8539 8.35352 73.6859 9.18545 73.6859 10.2052C73.6859 11.1982 72.8539 12.057 71.8341 12.057ZM70.385 27.488V14.0697H73.2833V27.488H70.385Z"
+                                    fill="white" />
+                                <path d="M64.1211 27.4881V7.89746H67.0194V27.4881H64.1211Z" fill="white" />
+                                <path
+                                    d="M61.4884 17.7731V19.0613C61.4884 24.1871 57.785 27.8369 52.2835 27.8369C46.4331 27.8369 42.2734 23.4893 42.2734 18.0952C42.2734 12.701 46.4868 8.35352 52.1225 8.35352C55.6917 8.35352 58.7242 10.1516 60.3076 12.8084L57.6508 14.3381C56.6847 12.5937 54.5914 11.3592 52.1225 11.3592C48.1506 11.3592 45.3596 14.2844 45.3596 18.122C45.3596 21.906 48.097 24.8312 52.3103 24.8312C55.7186 24.8312 57.8118 23.0599 58.3754 20.5373H52.0956V17.7731H61.4884Z"
+                                    fill="white" />
+                                <path
+                                    d="M12.9968 15.7929L7.69141 15.7897L7.69338 19.8093L12.8168 19.8123C13.3727 19.8121 13.8857 19.5159 14.1619 19.0357L17.0516 14.0292C17.3297 13.5479 17.3286 12.9558 17.0497 12.4728L14.4843 8.02932L11.0062 10.0374L13.6627 14.6386C13.9613 15.1513 13.5904 15.7914 12.9968 15.7929Z"
+                                    fill="black" />
+                                <path
+                                    d="M22.0295 14.6304L24.6849 10.0374L21.2029 8.0293L18.6386 12.4648C18.3608 12.9463 18.3608 13.5387 18.6386 14.018L21.5295 19.0238C21.8073 19.5053 22.3206 19.8004 22.8784 19.8004H28.0092V15.7842H22.6961C22.1028 15.7865 21.734 15.1452 22.0295 14.6304Z"
+                                    fill="black" />
+                                <path
+                                    d="M18.4029 23.0992L21.0529 27.6954L24.533 25.6839L21.9739 21.2454C21.6958 20.7641 21.1827 20.4679 20.6288 20.4688L14.8482 20.4695C14.2923 20.4693 13.7801 20.7663 13.5012 21.2493L10.9358 25.6928L14.4139 27.7009L17.0704 23.0996C17.3651 22.5847 18.1049 22.5859 18.4029 23.0992Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <button data-collapse-toggle="navbar-default" type="button" id="toggleButton"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:opacity-100 opacity-0 w-full lg:flex lg:pl-11 max-h-96 overflow-auto lg:max-h-none lg:overflow-visible lg:shadow-none shadow-[0_10px_15px_-5px_rgba(255,255,255,0.3)] lg:p-0 p-5"
+                    id="navbar-default">
+                    <ul
+                        class="flex lg:items-center flex-col mt-4 lg:mt-0 gap-2 lg:gap-9 lg:flex-row ml-auto  xl-0 lg:mb-0 mb-2">
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">App</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Models</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Threads</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Articles</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Trainings</a>
+                            <span
+                                class="bg-limegreen rounded-full px-1.5 py-0.5 text-xs text-black-0a0a0a leading-5 font-medium">New</span>
+                        </li>
+
+                    </ul>
+                    <div class="flex items-center gap-2.5 ml-auto justify-center">
+                        <button
+                            class="p-2 border border-white/20 text-white rounded-lg text-sm leading-[18px] font-medium transition-all duration-500 hover:border-white/20 hover:bg-white/20 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none">
+                                <g clip-path="url(#clip0_2350_2679)">
+                                    <path
+                                        d="M15.2378 3.27795C14.0905 2.75155 12.8603 2.36371 11.574 2.14156C11.5505 2.13727 11.5271 2.14799 11.5151 2.1694C11.3568 2.45083 11.1816 2.81793 11.0588 3.10649C9.67534 2.89935 8.29891 2.89935 6.94377 3.10649C6.82101 2.81153 6.63939 2.45083 6.48045 2.1694C6.46839 2.14869 6.44498 2.13797 6.42156 2.14156C5.13597 2.36297 3.90571 2.75081 2.75772 3.27795C2.74777 3.28224 2.73926 3.28937 2.7336 3.29865C0.400069 6.78492 -0.239212 10.1855 0.074382 13.5439C0.0757882 13.5603 0.0850343 13.5761 0.097796 13.5861C1.63739 14.7167 3.12879 15.4031 4.59245 15.8581C4.61587 15.8653 4.64069 15.8567 4.65559 15.8374C5.00181 15.3646 5.31045 14.866 5.57507 14.3418C5.59068 14.3111 5.57577 14.2746 5.54385 14.2625C5.0543 14.0768 4.58816 13.8503 4.13975 13.5932C4.10427 13.5725 4.10143 13.5218 4.13409 13.4975C4.22844 13.4268 4.32284 13.3532 4.41294 13.279C4.42926 13.2654 4.45197 13.2625 4.47113 13.2711C7.41694 14.616 10.6061 14.616 13.5172 13.2711C13.5363 13.2618 13.5591 13.2647 13.5761 13.2782C13.6662 13.3525 13.7606 13.4268 13.8556 13.4975C13.8883 13.5218 13.8861 13.5725 13.8507 13.5932C13.4023 13.8553 12.9361 14.0768 12.4459 14.2617C12.4139 14.2739 12.3997 14.311 12.4154 14.3417C12.6857 14.8653 12.9943 15.3638 13.3342 15.8367C13.3484 15.8567 13.3739 15.8653 13.3973 15.8581C14.8681 15.4031 16.3595 14.7167 17.8991 13.586C17.9126 13.5761 17.9211 13.561 17.9225 13.5446C18.2978 9.66194 17.2938 6.28922 15.2611 3.29936C15.2562 3.28937 15.2477 3.28224 15.2378 3.27795ZM6.01505 11.499C5.12816 11.499 4.39737 10.6848 4.39737 9.68479C4.39737 8.68484 5.11396 7.87058 6.01505 7.87058C6.92317 7.87058 7.6469 8.69197 7.63269 9.68479C7.63269 10.6848 6.91607 11.499 6.01505 11.499ZM11.9961 11.499C11.1092 11.499 10.3784 10.6848 10.3784 9.68479C10.3784 8.68484 11.095 7.87058 11.9961 7.87058C12.9042 7.87058 13.6279 8.69197 13.6138 9.68479C13.6138 10.6848 12.9043 11.499 11.9961 11.499Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2350_2679">
+                                        <rect width="18" height="18" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <button
+                            class="py-2 px-3 rounded-lg bg-[#C6FF00] hover:bg-[#D7FF4D] hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] text-sm leading-[18px] font-medium text-black transition-all duration-500"
+                            data-modal-target="Sign_In">Generate
+                        </button>
+                        <button
+                            class="py-2 px-3 border border-white/20 text-white rounded-lg text-sm leading-[18px] font-medium transition-all duration-500 hover:border-white/20 hover:bg-white/20 ">Sign
+                            In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--hero section-->
+    <div
+        class="hero relative w-full h-auto overflow-visible pt-[138px] after:contents-[''] after:absolute after:w-[278px] after:-left-[89px] after:-bottom-[136px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
+        <div class="max-w-[1534px] w-full px-4 lg:px-8 mx-auto relative z-10">
+            <div class="flex flex-col xl:flex-row items-center gap-[77px]">
+                <div class="relative flex items-center max-w-[658px] w-full">
+                    <div class="flex flex-col gap-[26px] overflow-visible xl:items-start items-center">
+                        <h1
+                            class="bg-gradient-to-b from-white to-[#828282] bg-clip-text text-transparent text-[64px] font-medium leading-[80px] xl:text-left text-center">
+                            Translate English video to Hindi
+                        </h1>
+                        <p class="text-lg font-normal leading-7 text-[#B1B1B1] xl:text-left text-center">
+                            Effortlessly convert your English videos into natural, fluent Hindi with precise subtitles
+                            and clear voice output. Make your content more accessible, engaging, and easy to understand
+                            for a wider Hindi speaking audience in just a few simple steps.
+                        </p>
+                        <a href=""
+                            class="py-3.5 px-[30px] w-max rounded-lg bg-[#C6FF00] text-lg font-semibold leading-[26px] text-black transition-all duration-500 hover:shadow-md hover:shadow-[#c8ff00bd]">
+                            Generate Now!</a>
+                    </div>
+                </div>
+                <div
+                    class="relative mx-auto lg:w-full  max-h-max p-3 bg-[#111111] rounded-[26px] flex flex-col gap-3 tabs">
+                    <ul
+                        class="audio-tab tab-buttons flex items-center gap-1.5 p-1 bg-[#C6FF00] rounded-lg w-fit absolute top-5 right-5 z-20">
+                        <li
+                            class="w-fit flex items-center justify-center text-center py-2 px-3 rounded font-inter text-xs font-semibold  transition-all duration-500">
+                            English </li>
+                        <li
+                            class="w-fit flex items-center justify-center text-center py-2 px-3 rounded font-inter text-xs font-semibold transition-all duration-500 active">
+                            Hindi </li>
+                    </ul>
+                    <div class="tab-content z-10">
+                        <div class="tab-panel !pt-0 ">
+                            <video controls="" class="object-cover w-full h-[438px] aspect-video rounded-[16px]"
+                                controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
+                                <source src="https://glima.ai/storage/media/1777458673_MfIRphpnKUDyz.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="tab-panel !pt-0 active">
+                            <video controls="" class="object-cover w-full h-[438px]  aspect-video rounded-[16px]"
+                                controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
+                                <source src="https://glima.ai/storage/media/1777458744_RTNtphp8gJKr0.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative w-full pt-14 lg:pt-[120px]">
+        <div class="max-w-[1534px] w-full px-4 lg:px-8 mx-auto relative flex flex-col gap-9 lg:gap-[70px]">
+            <div class="flex flex-col gap-3.5">
+                <h2
+                    class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
+                    Key Features of Glima AI Translate English video to Hindi</h2>
+                <p class="text-lg font-normal text-[#B1B1B1] text-center lg:text-start ">Break language barriers with
+                    advanced AI that delivers natural Hindi audio, accurate subtitles, and an engaging viewing
+                    experience in just a few clicks.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+                <div
+                    class="border border-[#FFFFFF1A] rounded-[20px] bg-gradient-to-b from-black/50 to-[#080808] p-[30px] flex flex-col gap-4 group">
+                    <div
+                        class="p-[13px] bg-[#111111] rounded-lg w-fit transition-all duration-500 text-white group-hover:bg-[#C6FF000D] group-hover:text-[#C6FF00]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path
+                                d="M24.0846 9.91536V15.582C24.0846 19.494 20.9133 22.6654 17.0013 22.6654C13.0893 22.6654 9.91797 19.494 9.91797 15.582V9.91536C9.91797 6.00335 13.0893 2.83203 17.0013 2.83203C20.9133 2.83203 24.0846 6.00335 24.0846 9.91536Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M24.082 9.91797H19.832M24.082 15.5846H19.832" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                            <path
+                                d="M28.3346 15.582C28.3346 21.8413 23.2606 26.9154 17.0013 26.9154M17.0013 26.9154C10.7421 26.9154 5.66797 21.8413 5.66797 15.582M17.0013 26.9154V31.1654M17.0013 31.1654H21.2513M17.0013 31.1654H12.7513"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h4 class="pt-3.5 text-2xl font-medium text-white">Natural Hindi Voice Output</h4>
+                    <p class="text-base font-normal text-white/50">Convert English speech into smooth, natural sounding
+                        Hindi audio that feels clear and engaging, without any robotic tone.</p>
+                </div>
+                <div
+                    class="border border-[#FFFFFF1A] rounded-[20px] bg-gradient-to-b from-black/50 to-[#080808] p-[30px] flex flex-col gap-4 group">
+                    <div
+                        class="p-[13px] bg-[#111111] rounded-lg w-fit transition-all duration-500 text-white group-hover:bg-[#C6FF000D] group-hover:text-[#C6FF00]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path
+                                d="M8.77414 16.145L17.272 4.69181C17.9366 3.79606 19.1824 4.35358 19.1824 5.54676V14.4116C19.1824 15.1265 19.6708 15.7059 20.2735 15.7059H24.4068C25.3456 15.7059 25.8461 17.019 25.2259 17.855L16.728 29.3081C16.0634 30.2039 14.8176 29.6464 14.8176 28.4532V19.5884C14.8176 18.8735 14.3292 18.2941 13.7265 18.2941H9.59329C8.65435 18.2941 8.15385 16.981 8.77414 16.145Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 class="pt-3.5 text-2xl font-medium text-white">Fast & Effortless Conversion</h4>
+                    <p class="text-base font-normal text-white/50">Turn your English videos into Hindi in just a few
+                        clicks with a simple and user-friendly process.</p>
+                </div>
+                <div
+                    class="border border-[#FFFFFF1A] rounded-[20px] bg-gradient-to-b from-black/50 to-[#080808] p-[30px] flex flex-col gap-4 group">
+                    <div
+                        class="p-[13px] bg-[#111111] rounded-lg w-fit transition-all duration-500 text-white group-hover:bg-[#C6FF000D] group-hover:text-[#C6FF00]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path d="M11.332 24.082H22.6654" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.332 18.418H16.9987" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M18.418 3.54036V4.2487C18.418 8.25564 18.418 10.2591 19.6628 11.5039C20.9076 12.7487 22.9111 12.7487 26.918 12.7487H27.6263M28.3346 15.096V19.832C28.3346 25.1746 28.3346 27.846 26.6749 29.5056C25.0152 31.1654 22.3438 31.1654 17.0013 31.1654C11.6587 31.1654 8.98743 31.1654 7.32769 29.5056C5.66797 27.846 5.66797 25.1746 5.66797 19.832V13.3945C5.66797 8.79736 5.66797 6.4988 6.92323 4.94192C7.17683 4.62739 7.46332 4.34089 7.77785 4.0873C9.33474 2.83203 11.6333 2.83203 16.2304 2.83203C17.23 2.83203 17.7296 2.83203 18.1873 2.99355C18.2825 3.02713 18.3758 3.06578 18.4668 3.10934C18.9047 3.31873 19.2581 3.67211 19.9648 4.37886L26.6749 11.089C27.4938 11.9079 27.9033 12.3174 28.119 12.838C28.3346 13.3587 28.3346 13.9378 28.3346 15.096Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 class="pt-3.5 text-2xl font-medium text-white">Perfect for All Content Types</h4>
+                    <p class="text-base font-normal text-white/50">Works well for tutorials, YouTube videos, reels, and
+                        all kinds of video content.</p>
+                </div>
+                <div
+                    class="border border-[#FFFFFF1A] rounded-[20px] bg-gradient-to-b from-black/50 to-[#080808] p-[30px] flex flex-col gap-4 group">
+                    <div
+                        class="p-[13px] bg-[#111111] rounded-lg w-fit transition-all duration-500 text-white group-hover:bg-[#C6FF000D] group-hover:text-[#C6FF00]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path
+                                d="M3.54297 17.0013C3.54297 10.657 3.54297 7.48483 5.51389 5.51389C7.48483 3.54297 10.657 3.54297 17.0013 3.54297C23.3456 3.54297 26.5178 3.54297 28.4888 5.51389C30.4596 7.48483 30.4596 10.657 30.4596 17.0013C30.4596 23.3456 30.4596 26.5178 28.4888 28.4888C26.5178 30.4596 23.3456 30.4596 17.0013 30.4596C10.657 30.4596 7.48483 30.4596 5.51389 28.4888C3.54297 26.5178 3.54297 23.3456 3.54297 17.0013Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M17 11.332V22.6654" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12.75 14.168V19.8346" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15.582V18.4154" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21.25 14.168V19.8346" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M25.5 15.582V18.4154" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 class="pt-3.5 text-2xl font-medium text-white">Clear and Crisp Audio Quality</h4>
+                    <p class="text-base font-normal text-white/50">Deliver high-quality Hindi voiceovers without
+                        distortion or robotic tones.</p>
+                </div>
+                <div
+                    class="border border-[#FFFFFF1A] rounded-[20px] bg-gradient-to-b from-black/50 to-[#080808] p-[30px] flex flex-col gap-4 group">
+                    <div
+                        class="p-[13px] bg-[#111111] rounded-lg w-fit transition-all duration-500 text-white group-hover:bg-[#C6FF000D] group-hover:text-[#C6FF00]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path
+                                d="M16.9987 31.1654C24.8227 31.1654 31.1654 24.8227 31.1654 16.9987C31.1654 9.17466 24.8227 2.83203 16.9987 2.83203C9.17466 2.83203 2.83203 9.17466 2.83203 16.9987C2.83203 24.8227 9.17466 31.1654 16.9987 31.1654Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M16.9987 31.1654C20.1283 31.1654 22.6654 24.8227 22.6654 16.9987C22.6654 9.17466 20.1283 2.83203 16.9987 2.83203C13.8691 2.83203 11.332 9.17466 11.332 16.9987C11.332 24.8227 13.8691 31.1654 16.9987 31.1654Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M2.83203 17H31.1654" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 class="pt-3.5 text-2xl font-medium text-white">Wider Audience Reach</h4>
+                    <p class="text-base font-normal text-white/50">Make your content accessible to millions of
+                        Hindi-speaking viewers instantly.</p>
+                </div>
+                <div
+                    class="border border-[#FFFFFF1A] rounded-[20px] bg-gradient-to-b from-black/50 to-[#080808] p-[30px] flex flex-col gap-4 group">
+                    <div
+                        class="p-[13px] bg-[#111111] rounded-lg w-fit transition-all duration-500 text-white group-hover:bg-[#C6FF000D] group-hover:text-[#C6FF00]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path
+                                d="M16.7198 9.19475L18.8244 7.09019C21.1941 4.72051 24.2964 3.73758 27.5797 3.57696C28.8568 3.51448 29.4953 3.48325 30.0073 3.99529C30.5194 4.50731 30.4881 5.14583 30.4256 6.4229C30.265 9.70618 29.2821 12.8086 26.9124 15.1782L24.8078 17.2828C23.0747 19.0159 22.582 19.5088 22.9458 21.3887C23.3049 22.8248 23.6524 24.2154 22.6082 25.2596C21.3415 26.5263 20.1861 26.5263 18.9195 25.2596L8.74296 15.0831C7.47633 13.8165 7.47629 12.6611 8.74296 11.3944C9.78717 10.3502 11.1778 10.6978 12.6138 11.0568C14.4938 11.4207 14.9867 10.9279 16.7198 9.19475Z"
+                                stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M3.54297 30.4583L10.6263 23.375" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M12.043 30.4583L14.8763 27.625" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M3.54297 21.9583L6.3763 19.125" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path
+                                d="M24.2617 9.91667H24.0846M24.4388 9.91667C24.4388 10.1123 24.2803 10.2708 24.0846 10.2708C23.889 10.2708 23.7305 10.1123 23.7305 9.91667C23.7305 9.72107 23.889 9.5625 24.0846 9.5625C24.2803 9.5625 24.4388 9.72107 24.4388 9.91667Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 class="pt-3.5 text-2xl font-medium text-white">Boost Content Performance</h4>
+                    <p class="text-base font-normal text-white/50">Increase watch time, retention, and audience
+                        interaction with Hindi localization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--feature section-->
+    <div
+        class="pt-14 lg:pt-[120px] relative w-full after:contents-[''] after:absolute after:w-[278px] after:-right-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
+        <div class="max-w-[1534px] w-full px-4 lg:px-8 mx-auto relative z-10">
+            <div class="flex flex-col gap-14 lg:gap-[120px]">
+                <div
+                    class="flex lg:flex-row flex-col lg:gap-[70px] gap-20 lg:justify-between justify-center items-center">
+                    <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center">
+                        <h3
+                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
+                            Instantly Convert English Content into Hindi Magic
+                        </h3>
+                        <p class="text-xl text-white/70 leading-8 font-normal lg:text-left text-center pb-3.5">
+                            Transform your English videos into engaging Hindi content instantly with the power of
+                            advanced AI. From accurate translation to natural voice output and perfectly synced
+                            subtitles, message stays clear, impactful, and easy to understand for a wider Hindi speaking
+                            audience.
+                        </p>
+                    </div>
+                    <div class="relative lg:w-1/2">
+                        <img src="	https://glima.ai/storage/media/1777459960_6Wt8phpSULQxx.webp" alt="img">
+                    </div>
+                </div>
+                <div
+                    class="flex lg:flex-row flex-col-reverse lg:gap-[70px] gap-20 lg:justify-between justify-center items-center">
+                    <div class="relative lg:w-1/2">
+                        <img src="	https://glima.ai/storage/media/1777459968_A2h2phpqCEFax.webp" alt="img">
+                    </div>
+                    <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center">
+                        <h3
+                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
+                            Translate, Dub, and Connect in Hindi Effortlessly
+                        </h3>
+                        <p class="text-xl text-white/70 leading-8 font-normal lg:text-left text-center pb-3.5">
+                            Seamlessly translate your English videos, add realistic Hindi dubbing, and connect with your
+                            audience like never before. This intelligent tool simplifies the entire process, helping you
+                            deliver content that feels natural, relatable, and truly engaging for Hindi viewers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--accordion section-->
+    <div class="py-14 lg:py-[120px] relative w-full">
+        <div class="max-w-[1534px] w-full px-4 lg:px-8 mx-auto relative z-10">
+            <div class="flex flex-col gap-4 mb-[70px] lg:items-start items-center">
+                <h2
+                    class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg leading-7 font-normal text-gray-B1B1B1 lg:text-left text-center">
+                    Find answers to common questions about our AI Translate English video to Hindi.
+                </p>
+            </div>
+            <div class="accordion-group flex flex-col gap-[28px] h-full lg:col-span-7 col-span-12"
+                data-accordion="default-accordion">
+                <div class="accordion rounded-2xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
+                    id="basic-heading-one-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-one-with-arrow-always-open">
+                        <h5 class="text-start">
+                            What is the Translate English Video to Hindi tool?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-one-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-one-with-arrow-always-open">
+                        <p class="text-base font-normal leading-6 text-white pt-3">
+                            This tool helps you convert English videos into Hindi by translating audio, generating
+                            subtitles, and optionally adding Hindi voice dubbing.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion rounded-2xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
+                    id="basic-heading-two-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-two-with-arrow-always-open">
+                        <h5 class="text-start">
+                            How does this tool work?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-two-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-two-with-arrow-always-open">
+                        <p class="text-base font-normal leading-6 text-white pt-3">
+                            Simply upload your video, and the tool automatically detects English speech, translates it
+                            into Hindi, and provides subtitles or dubbed audio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion rounded-2xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
+                    id="basic-heading-three-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-three-with-arrow-always-open">
+                        <h5 class="text-start">
+                            Can I get Hindi voice dubbing with this tool?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-three-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-three-with-arrow-always-open">
+                        <p class="text-base font-normal leading-6 text-white pt-3">
+                            Yes, the tool can generate natural sounding Hindi voiceovers to replace or overlay the
+                            original audio.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion rounded-2xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
+                    id="basic-heading-four-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-four-with-arrow-always-open">
+                        <h5 class="text-start">
+                            How fast is the translation process?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-four-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-four-with-arrow-always-open">
+                        <p class="text-base font-normal leading-6 text-white pt-3">
+                            The tool processes videos quickly, often delivering results within minutes depending on
+                            video length.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion rounded-2xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
+                    id="basic-heading-four-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-four-with-arrow-always-open">
+                        <h5 class="text-start">
+                            Does the tool maintain video quality?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-four-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-four-with-arrow-always-open">
+                        <p class="text-base font-normal leading-6 text-white pt-3">
+                            Yes, the tool preserves the original video quality while adding translations and dubbing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="absolute -left-[89px] bottom-[-152px] w-[278px] aspect-square rounded-full blur-[250px] bg-[#C6FF00] opacity-50 hidden lg:block">
+        </div>
+    </div>
+
+
+    <footer class="relative w-full py-16 bg-[#1B1B1B] border-t-[0.8px] border-white/20">
+        <div class="w-full max-w-[1760px] px-4 lg:px-8 mx-auto">
+            <div class="flex flex-col lg:flex-row max-lg:gap-6 items-center lg:justify-between">
+                <a href="#" class="">
+                    <svg width="113" height="36" viewBox="0 0 113 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="35.7268" height="35.7268" rx="7.58393" fill="#C6FF00" />
+                        <path
+                            d="M110.103 14.0696H113.002V27.4879H110.103V25.5556C109.084 26.978 107.5 27.8367 105.407 27.8367C101.757 27.8367 98.7246 24.7505 98.7246 20.7787C98.7246 16.7801 101.757 13.7207 105.407 13.7207C107.5 13.7207 109.084 14.5795 110.103 15.975V14.0696ZM105.863 25.0726C108.278 25.0726 110.103 23.2745 110.103 20.7787C110.103 18.2829 108.278 16.4849 105.863 16.4849C103.448 16.4849 101.623 18.2829 101.623 20.7787C101.623 23.2745 103.448 25.0726 105.863 25.0726Z"
+                            fill="white" />
+                        <path
+                            d="M91.3012 13.7207C94.3337 13.7207 96.3733 15.814 96.3733 19.1685V27.4879H93.475V19.3564C93.475 17.4778 92.4552 16.4312 90.8718 16.4312C89.1543 16.4312 87.9466 17.5315 87.9466 19.9736V27.4879H85.0483V19.3564C85.0483 17.4778 84.109 16.4312 82.5256 16.4312C80.8886 16.4312 79.5468 17.5315 79.5468 19.9736V27.4879H76.6484V14.0696H79.5468V15.6798C80.4056 14.3648 81.7205 13.7207 83.3844 13.7207C85.1288 13.7207 86.4169 14.499 87.1952 15.8408C88.0808 14.4453 89.5031 13.7207 91.3012 13.7207Z"
+                            fill="white" />
+                        <path
+                            d="M71.8341 12.057C70.8144 12.057 69.9824 11.1982 69.9824 10.2052C69.9824 9.18545 70.8144 8.35352 71.8341 8.35352C72.8539 8.35352 73.6859 9.18545 73.6859 10.2052C73.6859 11.1982 72.8539 12.057 71.8341 12.057ZM70.385 27.488V14.0697H73.2833V27.488H70.385Z"
+                            fill="white" />
+                        <path d="M64.1211 27.4881V7.89746H67.0194V27.4881H64.1211Z" fill="white" />
+                        <path
+                            d="M61.4884 17.7731V19.0613C61.4884 24.1871 57.785 27.8369 52.2835 27.8369C46.4331 27.8369 42.2734 23.4893 42.2734 18.0952C42.2734 12.701 46.4868 8.35352 52.1225 8.35352C55.6917 8.35352 58.7242 10.1516 60.3076 12.8084L57.6508 14.3381C56.6847 12.5937 54.5914 11.3592 52.1225 11.3592C48.1506 11.3592 45.3596 14.2844 45.3596 18.122C45.3596 21.906 48.097 24.8312 52.3103 24.8312C55.7186 24.8312 57.8118 23.0599 58.3754 20.5373H52.0956V17.7731H61.4884Z"
+                            fill="white" />
+                        <path
+                            d="M12.9968 15.7929L7.69141 15.7897L7.69338 19.8093L12.8168 19.8123C13.3727 19.8121 13.8857 19.5159 14.1619 19.0357L17.0516 14.0292C17.3297 13.5479 17.3286 12.9558 17.0497 12.4728L14.4843 8.02932L11.0062 10.0374L13.6627 14.6386C13.9613 15.1513 13.5904 15.7914 12.9968 15.7929Z"
+                            fill="black" />
+                        <path
+                            d="M22.0295 14.6304L24.6849 10.0374L21.2029 8.0293L18.6386 12.4648C18.3608 12.9463 18.3608 13.5387 18.6386 14.018L21.5295 19.0238C21.8073 19.5053 22.3206 19.8004 22.8784 19.8004H28.0092V15.7842H22.6961C22.1028 15.7865 21.734 15.1452 22.0295 14.6304Z"
+                            fill="black" />
+                        <path
+                            d="M18.4029 23.0992L21.0529 27.6954L24.533 25.6839L21.9739 21.2454C21.6958 20.7641 21.1827 20.4679 20.6288 20.4688L14.8482 20.4695C14.2923 20.4693 13.7801 20.7663 13.5012 21.2493L10.9358 25.6928L14.4139 27.7009L17.0704 23.0996C17.3651 22.5847 18.1049 22.5859 18.4029 23.0992Z"
+                            fill="black" />
+                    </svg>
+                </a>
+                <ul class="flex items-center justify-center md:flex-row flex-col gap-5 md:gap-12">
+                    <li><a href="#"
+                            class="text-base font-normal leading-[30px] text-white transition-all duration-500 hover:text-[#C6FF00]">Bevelify</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-base font-normal leading-[30px] text-white transition-all duration-500 hover:text-[#C6FF00]">Products</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-base font-normal leading-[30px] text-white transition-all duration-500 hover:text-[#C6FF00]">Resources</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-base font-normal leading-[30px] text-white transition-all duration-500 hover:text-[#C6FF00]">Blogs</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-base font-normal leading-[30px] text-white transition-all duration-500 hover:text-[#C6FF00]">Support</a>
+                    </li>
+                </ul>
+                <ul class="flex items-center gap-4">
+                    <li><a href="#"
+                            class="w-9 h-9 rounded-full border border-white flex items-center justify-center text-white transition-all duration-500 hover:border-[#C6FF00] hover:text-[#C6FF00]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M11.3205 8.93568L16.4909 3.05469H15.2657L10.7762 8.16107L7.19043 3.05469H3.05469L8.47705 10.7764L3.05469 16.9436H4.27999L9.02102 11.5511L12.8078 16.9436H16.9436L11.3202 8.93568H11.3205ZM9.64225 10.8445L9.09285 10.0756L4.72148 3.95724H6.60347L10.1312 8.89492L10.6806 9.66384L15.2663 16.0821H13.3843L9.64225 10.8448V10.8445Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a></li>
+                    <li><a href="#"
+                            class="w-9 h-9 rounded-full border border-white flex items-center justify-center text-white transition-all duration-500 hover:border-[#C6FF00] hover:text-[#C6FF00]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M7.71365 9.94054C7.71365 8.66215 8.76493 7.62554 10.0621 7.62554C11.3593 7.62554 12.4111 8.66215 12.4111 9.94054C12.4111 11.2189 11.3593 12.2555 10.0621 12.2555C8.76493 12.2555 7.71365 11.2189 7.71365 9.94054ZM6.44382 9.94054C6.44382 11.91 8.06372 13.5064 10.0621 13.5064C12.0605 13.5064 13.6804 11.91 13.6804 9.94054C13.6804 7.97109 12.0605 6.37465 10.0621 6.37465C8.06372 6.37465 6.44382 7.97109 6.44382 9.94054ZM12.978 6.23326C12.978 6.39808 13.0275 6.55921 13.1204 6.69629C13.2132 6.83337 13.3452 6.94023 13.4997 7.00337C13.6542 7.0665 13.8242 7.08307 13.9883 7.05098C14.1523 7.01889 14.303 6.93958 14.4213 6.82308C14.5396 6.70659 14.6202 6.55813 14.6529 6.3965C14.6856 6.23486 14.6689 6.0673 14.605 5.915C14.541 5.7627 14.4327 5.63251 14.2937 5.54089C14.1547 5.44927 13.9912 5.40033 13.824 5.40026H13.8236C13.5995 5.40036 13.3845 5.48815 13.2259 5.64433C13.0674 5.80052 12.9782 6.01234 12.978 6.23326ZM7.21533 15.5931C6.52832 15.5623 6.15492 15.4495 5.90677 15.3543C5.57778 15.228 5.34305 15.0777 5.09625 14.8348C4.84946 14.5919 4.69669 14.3608 4.56918 14.0366C4.47244 13.7921 4.35801 13.424 4.32678 12.747C4.29262 12.015 4.28579 11.7951 4.28579 9.94059C4.28579 8.08609 4.29318 7.86682 4.32678 7.1342C4.35806 6.45715 4.47334 6.08976 4.56918 5.84459C4.69725 5.52037 4.84979 5.28904 5.09625 5.04582C5.34271 4.80259 5.57722 4.65204 5.90677 4.52637C6.1548 4.43104 6.52832 4.31826 7.21533 4.28748C7.95808 4.25382 8.1812 4.24709 10.0621 4.24709C11.943 4.24709 12.1664 4.25437 12.9097 4.28748C13.5967 4.31832 13.9695 4.43193 14.2183 4.52637C14.5473 4.65204 14.782 4.80293 15.0288 5.04582C15.2756 5.2887 15.4278 5.52037 15.5559 5.84459C15.6526 6.08904 15.767 6.45715 15.7983 7.1342C15.8324 7.86682 15.8393 8.08609 15.8393 9.94059C15.8393 11.7951 15.8324 12.0144 15.7983 12.747C15.767 13.424 15.652 13.792 15.5559 14.0366C15.4278 14.3608 15.2753 14.5921 15.0288 14.8348C14.7823 15.0775 14.5473 15.228 14.2183 15.3543C13.9702 15.4496 13.5967 15.5624 12.9097 15.5931C12.167 15.6268 11.9439 15.6335 10.0621 15.6335C8.18036 15.6335 7.95786 15.6268 7.21533 15.5931ZM7.15698 3.03815C6.40684 3.07182 5.89425 3.18904 5.4466 3.3607C4.983 3.53798 4.59054 3.77582 4.19836 4.1617C3.80618 4.54759 3.56548 4.93498 3.38559 5.39187C3.2114 5.83332 3.09246 6.33821 3.0583 7.07748C3.02357 7.81793 3.01562 8.05465 3.01562 9.94054C3.01562 11.8264 3.02357 12.0631 3.0583 12.8036C3.09246 13.5429 3.2114 14.0478 3.38559 14.4892C3.56548 14.9458 3.80624 15.3336 4.19836 15.7194C4.59048 16.1051 4.983 16.3426 5.4466 16.5204C5.8951 16.692 6.40684 16.8093 7.15698 16.8429C7.9087 16.8766 8.14851 16.885 10.0621 16.885C11.9757 16.885 12.2159 16.8771 12.9672 16.8429C13.7174 16.8093 14.2297 16.692 14.6776 16.5204C15.1409 16.3426 15.5337 16.1053 15.9258 15.7194C16.318 15.3335 16.5582 14.9458 16.7386 14.4892C16.9128 14.0478 17.0323 13.5429 17.0659 12.8036C17.1001 12.0626 17.108 11.8264 17.108 9.94054C17.108 8.05465 17.1001 7.81793 17.0659 7.07748C17.0317 6.33815 16.9128 5.83304 16.7386 5.39187C16.5582 4.93526 16.3174 4.5482 15.9258 4.1617C15.5343 3.7752 15.1409 3.53798 14.6782 3.3607C14.2297 3.18904 13.7174 3.07126 12.9678 3.03815C12.2165 3.00448 11.9763 2.99609 10.0627 2.99609C8.14907 2.99609 7.9087 3.00393 7.15698 3.03815Z"
+                                    fill="currentColor" />
+                            </svg></a>
+                    </li>
+                    <li><a href="#"
+                            class="w-9 h-9 rounded-full border border-white flex items-center justify-center text-white transition-all duration-500 hover:border-[#C6FF00] hover:text-[#C6FF00]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M6.87549 15.5566V7.87225H4.31499V15.5566H6.87576H6.87549ZM5.59578 6.82327C6.48849 6.82327 7.04427 6.2332 7.04427 5.49579C7.02756 4.74157 6.48849 4.16797 5.61275 4.16797C4.73641 4.16797 4.16406 4.74157 4.16406 5.49572C4.16406 6.23314 4.71964 6.8232 5.579 6.8232H5.59558L5.59578 6.82327ZM8.29277 15.5566H10.8531V11.2658C10.8531 11.0364 10.8698 10.8065 10.9374 10.6426C11.1224 10.1836 11.5437 9.7084 12.2512 9.7084C13.1775 9.7084 13.5483 10.413 13.5483 11.4461V15.5566H16.1085V11.1506C16.1085 8.79043 14.8455 7.6921 13.1609 7.6921C11.7798 7.6921 11.1732 8.46212 10.8362 8.98658H10.8533V7.87252H8.2929C8.32632 8.5934 8.2927 15.5569 8.2927 15.5569L8.29277 15.5566Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="#"
+                            class="w-9 h-9 rounded-full border border-white flex items-center justify-center text-white transition-all duration-500 hover:border-[#C6FF00] hover:text-[#C6FF00]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.9307 5.13919C16.5645 5.31036 17.0626 5.80978 17.231 6.44286C17.5374 7.59178 17.5374 9.99044 17.5374 9.99044C17.5374 9.99044 17.5374 12.3891 17.231 13.538C17.0603 14.1734 16.5621 14.6729 15.9307 14.8417C14.7847 15.1489 10.1867 15.1489 10.1867 15.1489C10.1867 15.1489 5.591 15.1489 4.44267 14.8417C3.80886 14.6705 3.31071 14.1711 3.14232 13.538C2.83594 12.3891 2.83594 9.99044 2.83594 9.99044C2.83594 9.99044 2.83594 7.59178 3.14232 6.44286C3.31305 5.80744 3.8112 5.30801 4.44267 5.13919C5.591 4.83203 10.1867 4.83203 10.1867 4.83203C10.1867 4.83203 14.7847 4.83203 15.9307 5.13919ZM12.5371 9.99044L8.71787 12.2015V7.77936L12.5371 9.99044Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/jquery-min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tabs').each(function () {
+                const $tabs = $(this);
+                const $buttons = $tabs.find('> .tab-buttons > li');
+                const $panels = $tabs.find('> .tab-content > .tab-panel');
+
+                $buttons.click(function () {
+                    const index = $(this).index();
+
+                    $buttons.removeClass('active');
+                    $(this).addClass('active');
+
+                    $panels.removeClass('active');
+                    $panels.eq(index).addClass('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

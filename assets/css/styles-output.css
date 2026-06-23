@@ -4348,6 +4348,10 @@ pre{
   height: 122px;
 }
 
+.h-\[126px\] {
+  height: 126px;
+}
+
 .h-\[130px\] {
   height: 130px;
 }
@@ -4358,6 +4362,10 @@ pre{
 
 .h-\[140px\] {
   height: 140px;
+}
+
+.h-\[142px\] {
+  height: 142px;
 }
 
 .h-\[146px\] {
@@ -4484,6 +4492,10 @@ pre{
   height: 290px;
 }
 
+.h-\[295px\] {
+  height: 295px;
+}
+
 .h-\[2px\] {
   height: 2px;
 }
@@ -4544,6 +4556,10 @@ pre{
   height: 380px;
 }
 
+.h-\[38px\] {
+  height: 38px;
+}
+
 .h-\[3px\] {
   height: 3px;
 }
@@ -4562,6 +4578,10 @@ pre{
 
 .h-\[42px\] {
   height: 42px;
+}
+
+.h-\[438px\] {
+  height: 438px;
 }
 
 .h-\[44px\] {
@@ -5659,8 +5679,20 @@ pre{
   max-width: 80rem;
 }
 
+.max-w-\[1013px\] {
+  max-width: 1013px;
+}
+
 .max-w-\[1015px\] {
   max-width: 1015px;
+}
+
+.max-w-\[1100px\] {
+  max-width: 1100px;
+}
+
+.max-w-\[1120px\] {
+  max-width: 1120px;
 }
 
 .max-w-\[1140px\] {
@@ -5717,6 +5749,10 @@ pre{
 
 .max-w-\[1500px\] {
   max-width: 1500px;
+}
+
+.max-w-\[1502px\] {
+  max-width: 1502px;
 }
 
 .max-w-\[1534px\] {
@@ -5923,6 +5959,10 @@ pre{
   max-width: 580px;
 }
 
+.max-w-\[583px\] {
+  max-width: 583px;
+}
+
 .max-w-\[590px\] {
   max-width: 590px;
 }
@@ -5933,6 +5973,10 @@ pre{
 
 .max-w-\[604px\] {
   max-width: 604px;
+}
+
+.max-w-\[616px\] {
+  max-width: 616px;
 }
 
 .max-w-\[628px\] {
@@ -6370,6 +6414,10 @@ pre{
   list-style-type: disc;
 }
 
+.list-none {
+  list-style-type: none;
+}
+
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -6637,6 +6685,10 @@ pre{
 
 .gap-\[62px\] {
   gap: 62px;
+}
+
+.gap-\[65px\] {
+  gap: 65px;
 }
 
 .gap-\[6px\] {
@@ -7211,10 +7263,6 @@ pre{
   border-color: #FFFFFF80;
 }
 
-.border-\[rgba\(0\2c 0\2c 0\2c 0\)\] {
-  border-color: rgba(0,0,0,0);
-}
-
 .border-\[rgba\(153\2c 153\2c 153\2c 0\.20\)\] {
   border-color: rgba(153,153,153,0.20);
 }
@@ -7328,6 +7376,10 @@ pre{
 
 .bg-\[\#00000029\] {
   background-color: #00000029;
+}
+
+.bg-\[\#00000066\] {
+  background-color: #00000066;
 }
 
 .bg-\[\#00000080\] {
@@ -7758,6 +7810,11 @@ pre{
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-500 {
@@ -8374,6 +8431,14 @@ pre{
   background-repeat: no-repeat;
 }
 
+.fill-\[\#b1b1b1\] {
+  fill: #b1b1b1;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
 .stroke-\[\#C6FF00\] {
   stroke: #C6FF00;
 }
@@ -8474,6 +8539,10 @@ pre{
 
 .p-\[1\.7px\] {
   padding: 1.7px;
+}
+
+.p-\[11px\] {
+  padding: 11px;
 }
 
 .p-\[12px\] {
@@ -8872,6 +8941,10 @@ pre{
 
 .\!pb-0 {
   padding-bottom: 0px !important;
+}
+
+.\!pt-0 {
+  padding-top: 0px !important;
 }
 
 .pb-0 {
@@ -9575,6 +9648,10 @@ pre{
   text-transform: uppercase;
 }
 
+.lowercase {
+  text-transform: lowercase;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -10110,6 +10187,10 @@ pre{
   opacity: 0.7;
 }
 
+.opacity-40 {
+  opacity: 0.4;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -10287,6 +10368,11 @@ pre{
   --tw-ring-inset: inset;
 }
 
+.ring-limegreen {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(198 255 0 / var(--tw-ring-opacity, 1));
+}
+
 .ring-transparent {
   --tw-ring-color: transparent;
 }
@@ -10294,15 +10380,6 @@ pre{
 .ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
-}
-
-.ring-limegreen\/0 {
-  --tw-ring-color: rgb(198 255 0 / 0);
-}
-
-.ring-limegreen {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(198 255 0 / var(--tw-ring-opacity, 1));
 }
 
 .ring-opacity-0 {
@@ -10422,6 +10499,12 @@ pre{
   transition-duration: 150ms;
 }
 
+.transition-\[box-shadow\] {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-\[height\] {
   transition-property: height;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -10448,12 +10531,6 @@ pre{
 
 .transition-transform {
   transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-\[box-shadow\] {
-  transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -11692,10 +11769,6 @@ textarea{
   --tw-ring-color: rgb(255 255 255 / 0.3);
 }
 
-.hover\:ring-limegreen\/100:hover {
-  --tw-ring-color: rgb(198 255 0 / 1);
-}
-
 .hover\:ring-opacity-100:hover {
   --tw-ring-opacity: 1;
 }
@@ -11903,10 +11976,6 @@ textarea{
   fill: #fff;
 }
 
-.group:hover .group-hover\:stroke-\[\#C6FF00\] {
-  stroke: #C6FF00;
-}
-
 .group:hover .group-hover\:stroke-limegreen {
   stroke: #C6FF00;
 }
@@ -11958,6 +12027,10 @@ textarea{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group.active .group-\[\&\.active\]\:bg-\[rgba\(198\2c 255\2c 0\2c 0\.10\)\] {
+  background-color: rgba(198,255,0,0.10);
+}
+
 .group.active .group-\[\&\.active\]\:fill-\[\#C6FF00\] {
   fill: #C6FF00;
 }
@@ -11978,6 +12051,10 @@ textarea{
 .group.active .group-\[\.active\]\:text-\[\#C6FF00\] {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
+}
+
+.group.active .group-\[\&\.active\]\:opacity-100 {
+  opacity: 1;
 }
 
 .peer:checked ~ .peer-checked\:rotate-180 {
@@ -14366,6 +14443,10 @@ textarea{
     margin-left: -66px;
   }
 
+  .lg\:ml-\[30px\] {
+    margin-left: 30px;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -14594,6 +14675,10 @@ textarea{
     width: 260px;
   }
 
+  .lg\:w-\[268px\] {
+    width: 268px;
+  }
+
   .lg\:w-\[280px\] {
     width: 280px;
   }
@@ -14813,6 +14898,10 @@ textarea{
 
   .lg\:max-w-\[665px\] {
     max-width: 665px;
+  }
+
+  .lg\:max-w-\[670px\] {
+    max-width: 670px;
   }
 
   .lg\:max-w-\[700px\] {
@@ -16270,6 +16359,10 @@ textarea{
 .\[\&\.active\]\:bg-\[\#111111\].active {
   --tw-bg-opacity: 1;
   background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+}
+
+.\[\&\.active\]\:font-semibold.active {
+  font-weight: 600;
 }
 
 .\[\&\.active\]\:text-limegreen.active {
