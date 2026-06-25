@@ -8435,10 +8435,6 @@ pre{
   fill: #b1b1b1;
 }
 
-.fill-white {
-  fill: #fff;
-}
-
 .stroke-\[\#C6FF00\] {
   stroke: #C6FF00;
 }
@@ -9936,6 +9932,11 @@ pre{
   color: rgb(140 132 132 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#909090\] {
+  --tw-text-opacity: 1;
+  color: rgb(144 144 144 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#B1B1B1\] {
   --tw-text-opacity: 1;
   color: rgb(177 177 177 / var(--tw-text-opacity, 1));
@@ -9990,6 +9991,10 @@ pre{
 
 .text-\[rgba\(10\2c 10\2c 10\2c 0\.5\)\] {
   color: rgba(10,10,10,0.5);
+}
+
+.text-\[rgba\(198\2c 255\2c 0\2c 0\.7\)\] {
+  color: rgba(198,255,0,0.7);
 }
 
 .text-\[rgba\(255\2c 255\2c 255\2c 0\.3\)\] {
@@ -10185,10 +10190,6 @@ pre{
 
 .opacity-70 {
   opacity: 0.7;
-}
-
-.opacity-40 {
-  opacity: 0.4;
 }
 
 .shadow {
@@ -11643,6 +11644,10 @@ textarea{
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-\[rgba\(198\2c 255\2c 0\2c 0\.9\)\]:hover {
+  color: rgba(198,255,0,0.9);
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -11923,6 +11928,12 @@ textarea{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:scale-\[1\.03\] {
+  --tw-scale-x: 1.03;
+  --tw-scale-y: 1.03;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:scale-\[1\.05\] {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -12051,10 +12062,6 @@ textarea{
 .group.active .group-\[\.active\]\:text-\[\#C6FF00\] {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
-}
-
-.group.active .group-\[\&\.active\]\:opacity-100 {
-  opacity: 1;
 }
 
 .peer:checked ~ .peer-checked\:rotate-180 {
@@ -14727,6 +14734,10 @@ textarea{
     width: 660px;
   }
 
+  .lg\:w-\[688px\] {
+    width: 688px;
+  }
+
   .lg\:w-\[75\%\] {
     width: 75%;
   }
@@ -14780,6 +14791,10 @@ textarea{
     width: 100%;
   }
 
+  .lg\:min-w-\[290px\] {
+    min-width: 290px;
+  }
+
   .lg\:min-w-\[450px\] {
     min-width: 450px;
   }
@@ -14830,6 +14845,10 @@ textarea{
 
   .lg\:max-w-\[256px\] {
     max-width: 256px;
+  }
+
+  .lg\:max-w-\[290px\] {
+    max-width: 290px;
   }
 
   .lg\:max-w-\[350px\] {
@@ -15039,6 +15058,10 @@ textarea{
     align-items: center;
   }
 
+  .lg\:items-stretch {
+    align-items: stretch;
+  }
+
   .lg\:justify-start {
     justify-content: flex-start;
   }
@@ -15101,6 +15124,10 @@ textarea{
 
   .lg\:gap-\[150px\] {
     gap: 150px;
+  }
+
+  .lg\:gap-\[210px\] {
+    gap: 210px;
   }
 
   .lg\:gap-\[60px\] {
@@ -15907,6 +15934,15 @@ textarea{
     gap: 60px;
   }
 
+  .xl\:gap-x-\[90px\] {
+    -moz-column-gap: 90px;
+         column-gap: 90px;
+  }
+
+  .xl\:gap-y-\[40px\] {
+    row-gap: 40px;
+  }
+
   .xl\:overflow-hidden {
     overflow: hidden;
   }
@@ -16241,6 +16277,15 @@ textarea{
 
   .\32xl\:gap-\[96px\] {
     gap: 96px;
+  }
+
+  .\32xl\:gap-x-\[180px\] {
+    -moz-column-gap: 180px;
+         column-gap: 180px;
+  }
+
+  .\32xl\:gap-y-\[60px\] {
+    row-gap: 60px;
   }
 
   .\32xl\:p-5 {
