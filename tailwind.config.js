@@ -28,6 +28,7 @@ module.exports = {
     "./interior-empty-state/**/*.html",
     "./Music-Download-Free-Royalty/**/*.html",
     "./AI-Translate-Video-landingPage/**/*.html",
+    "./LLM-Free-Tools-Page/**/*.html",
   ],
   theme: {
     extend: {
